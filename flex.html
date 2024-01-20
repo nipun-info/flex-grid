@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Note: Flexible box, commonly referred to as flexbox, is a new layout model introduced in CSS3 for creating the flexible user interface design with multiple rows and columns without using the percentage or fixed length values.
+
+    Controlling the Dimensions of Flex Items:
+    The most important aspect of the flex layout is the ability of flex items to alter their width or height to fill the available space. This is achieved with the flex property. It is shorthand property for flex-grow, flex-shrink and flex-basis properties.
+
+    A flex container distributes the free space to its items proportional to their flex grow factor, or shrinks them to prevent overflow proportional to their flex shrink factor.
+
+    Aligning Flex Items within Flex Container:
+    There are four properties justify-content, align-content, align-items and align-self which are designed to control the alignment of flex items within flex container. The first three of them apply to flex containers whereas the last one applies to the individual flex items.
+
+    Align Flex Items along Main Axis: (See example-2:)
+    Flex items can be aligned along the main axis (i.e. in the horizontal direction) of the flex container using the justify-content property. It is typically used when the flex items do not use all the space available along the main axis.
+
+    The justify-content property accepts the following values:
+    - flex-start
+    - flex-end
+    - center
+    - space-between
+    - space-around
+
+    Align Flex Items along Cross Axis:
+    Flex items can be aligned along the cross axis (i.e. in the perpendicular direction) of the flex container using the align-items or align-self property. However, where the align-items is applied to the flex container, the align-self property is applied to the individual flex items, and overrides align-items.
+
+    Both properties accept the following values:
+    - flex-start
+    - flex-end
+    - center
+    - baseline: The text baseline(or inline axis) of each flex is aligned with the baseline of the flex item with the largest font-size.
+    - stretch: The flex item stretches to fill the current row or column unless prevented by the minimum and maximum width or height. Default value for align-items property.
+
+
+    Reordering Individual Flex Items:
+
+
+
+
+    -->
+
+    <!--  
+    <example-1>
+        <style>
+            .flex-container {
+                width: 80%;
+                min-height: 300px;
+                display: flex;
+                border: 1px solid #808080;
+            }
+
+            .flex-container div {
+                background-color: #dbdfe5;
+                padding: 10px;
+                border: 2px solid yellow;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .flex-container div.bg-alt {
+                background: #b4bac0;
+            }
+
+            .item1,
+            .item3 {
+                flex: 1;
+            }
+
+            .item2 {
+                flex: 2;
+            }
+        </style>
+
+            <div class="flex-container">
+                <div class="item1">Item 1</div>
+                <div class="item2 bg-alt">Item 2</div>
+                <div class="item3">Item 3</div>
+            </div>
+
+        </example-1>
+    -->
+
+    
+    <!-- 
+    <Example-2>
+        <style>
+            .flex-container-two {
+                max-width: 80%;
+                margin: 0 auto;
+                min-height: 300px;
+                border: 1px solid #666;
+                font-size: 1.5rem;
+                margin-top: 3rem;
+                display: flex;
+                /* justify-content: center; */
+                justify-content: flex-end;
+                gap: 1rem;
+
+            }
+
+            .flex-container-two div {
+                padding: 10px;
+            }
+
+            .flex-container-two .item1 {
+                width: 75px;
+                background: #e84d51;
+            }
+
+            .flex-container-two .item2 {
+                width: 125px;
+                background: #7ed636;
+            }
+
+            .flex-container-two .item3 {
+                width: 175px;
+                background: #2f97ff;
+            }
+        </style>
+
+        <div class="flex-container-two">
+            <div class="item1">Item 1</div>
+            <div class="item2 bg-alt">Item 2</div>
+            <div class="item3">Item 3</div>
+        </div>
+
+    </Example-2> 
+
+    -->
+
+    <Example-3></Example-3>
+
+    <style>
+        .flex-container-three {
+            width: 80%;
+            height: 80vh;
+            margin: 0 auto;
+            border: 1px solid #666;
+            font-size: 2rem;
+            background-color: azure;
+            display: flex;
+            gap: 1rem;
+
+            align-items: stretch;   /* by default*/
+            align-items: center;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: baseline;
+            
+        }
+
+        .flex-container-three .item1 {
+            background-color: brown;
+            align-self: center;
+        }
+
+        .flex-container-three .item2 {
+            background-color: bisque;
+            align-self: stretch;
+        }
+
+        .flex-container-three .item3 {
+            background-color: cyan;
+            align-self: flex-end;
+        }
+    </style>
+
+    <div class="flex-container-three">
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+        <div class="item3">Item 3</div>
+    </div>
+
+    <Example-4></Example-4>
+
+
+    <Example-5></Example-6>
+
+
+
+
+
+
+
+</body>
+
+</html>
