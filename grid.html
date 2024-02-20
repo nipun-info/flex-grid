@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid System</title>
+</head>
+
+<body>
+    <!-- https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+    <!-- Grid Container and Grid Items -->
+    <div class="container">
+        <div class="item itmem-1"></div>
+        <div class="item itmem-2"></div>
+        <div class="item itmem-3">
+            <div class="sub-item"></div>
+            <!-- sub-item is not grid items -->
+        </div>
+        <div class="item itmem-4"></div>
+    </div>
+
+    <!-- Grid Line -->
+    <!-- Vertical == Column gird lines -->
+    <!-- Horizontal == row gird lines -->
+
+    <!-- Grid Cell: The space between two adjacent row and two adjacent column grid lines. It's a single "unit" of the grid. -->
+
+    <!-- Grid Track: The space between two adjacent grid lines. You can think of them as the columns or rows of the grid -->
+
+    <!-- Grid Area: A grid area may be composed of any number of grid cells  -->
+
+    <!-- ExampleOne -->
+    <style>
+        #exampleOne {
+            border: 3px solid slategrey;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        #exampleOne .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-size: 150%;
+        }
+
+        #exampleOne .box .box {
+            background-color: #999;
+        }
+
+        #exampleOne .grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
+            color: #444;
+            margin: 4rem 0;
+        }
+
+        #exampleOne .i {
+            padding: 0;
+            display: grid;
+            gap: 10px;
+            grid-column: auto / span 3;
+            grid-template-columns: 1fr 1fr 2fr;
+            /* grid-template-columns: subgrid; */
+            /* display: contents; */ 
+            /* display:content; ref: https://rachelandrew.co.uk/archives/2018/04/27/grid-level-2-and-subgrid/ */
+        }
+    </style>
+    <div id="exampleOne">
+        <div class="grid ">
+            <div class="box a">A</div>
+            <div class="box b">B</div>
+            <div class="box c">C</div>
+            <div class="box d">D</div>
+            <div class="box e">E</div>
+            <div class="box f">F</div>
+            <div class="box g">G</div>
+            <div class="box h">H</div>
+            <div class="box i">
+                <div class="box j">J</div>
+                <div class="box k">K</div>
+                <div class="box l">L</div>
+                <div class="box m">M</div>
+                <div class="box n">N</div>
+                <div class="box o">O</div>
+            </div>
+    
+            <div class="box p">P</div>
+            <div class="box q">Q</div>
+            <div class="box r">R</div>
+            <div class="box s">S</div>
+            <div class="box t">T</div>
+            <div class="box u">U</div>
+            <div class="box v">V</div>
+        </div>
+    </div>
+    
+
+    <!-- Example-2: -->
+    <style>
+         #exampleTwo .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            font-size: 150%;
+        }
+        #exampleTwo.grid{
+            display: grid;
+            gap: 10px;
+            /* (fr:The fr unit allows you to set the size of a track as a fraction of the free space of the grid container.) */
+
+            grid-template-columns: 1fr 1fr 1fr;
+            /* ( this will set each item to one third the width of the grid container) */
+
+            grid-template-columns: 1fr 50px 1fr 1fr;
+            /* The free space is calculated after any non-flexible items. In this example the total amount of free space available to the fr units doesn’t include the 50px: */
+
+            
+        }
+    </style>
+    <div id="exampleTwo" class="grid alphabet">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+        <div class="box p">P</div>
+        <div class="box q">Q</div>
+        <div class="box r">R</div>
+        <div class="box s">S</div>
+        <div class="box t">T</div>
+        <div class="box u">U</div>
+        <div class="box v">V</div>
+    </div>
+
+    
+
+
+</body>
+</html>

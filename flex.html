@@ -41,6 +41,47 @@
 
 
     Reordering Individual Flex Items:
+    In addition to altering the flow within a flex container, you can also change the order in which individual flex items are displayed using the order property. This property accepts positive or negative integer as value. By default, all flex items are displayed and laid out in the same order as they appear in the HTML markup as the default value of order is 0.
+
+    Horizontal and Vertical Center Alignment with Flexbox:
+    Normally vertical alignment of a content block involves the use of JavaScript or some ugly CSS tricks. But with flexbox you can easily do this without any adjustments.
+
+    <Example-4>
+        <style>
+            .flex-container-4 {
+                width: 500px;
+                min-height: 300px;
+                font-size: 24px;
+                border: 1px solid #666;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* way-1 */
+            /* .item {
+                width: 300px;
+                margin: auto;
+                padding: 25px;
+                background: #f0e68c;
+                text-align: center;
+            } */
+
+            .item {
+                background: #f0e68c;
+            }
+        </style>
+        <div class="flex-container-4">
+            <div class="item">Perfect Center Alignment</div>
+        </div>
+    </Example-4>
+
+    Wrapping:
+    One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout.
+
+
+
+
 
 
 
@@ -88,7 +129,7 @@
         </example-1>
     -->
 
-    
+
     <!-- 
     <Example-2>
         <style>
@@ -136,7 +177,7 @@
 
     -->
 
-    <Example-3></Example-3>
+    <!-- <Example-3>
 
     <style>
         .flex-container-three {
@@ -179,10 +220,47 @@
         <div class="item3">Item 3</div>
     </div>
 
-    <Example-4></Example-4>
+    </Example-3> -->
 
 
-    <Example-5></Example-6>
+
+
+
+
+
+    <Example-5>
+        <style>
+        #main {
+            width: 350px;
+            height: 100px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+          }
+          
+          #main div:nth-of-type(1) {flex-grow: 2;}
+          #main div:nth-of-type(2) {flex-grow: 4;}
+          #main div:nth-of-type(3) {flex-grow: 1;}
+          #main div:nth-of-type(4) {flex-grow: 1;}
+          #main div:nth-of-type(5) {flex-grow: 2;}
+          </style>
+
+          
+          <h1>The flex-grow Property</h1>
+          
+          <div id="main">
+            <div style="background-color:coral;"></div>
+            <div style="background-color:lightblue;"></div>
+            <div style="background-color:khaki;"></div>
+            <div style="background-color:pink;"></div>
+            <div style="background-color:lightgrey;"></div>
+          </div>
+
+    </Example-5>
+
+
+
+    <Example-6></Example-6>
+    <Example-7></Example-7>
 
 
 
